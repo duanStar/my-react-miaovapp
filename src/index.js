@@ -1,13 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {Provider} from 'react-redux';
+import store from './store/index';
+import {BrowserRouter} from 'react-router-dom';
+import './common/css/reset.css';
+import './common/css/common.css';
+import './common/css/class.css';
+import './common/css/login.css';
+import './common/css/index.css';
+import './common/css/class.css';
+import './common/css/teacher.css';
+import './common/css/miiaov.css';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Provider store={store}>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </Provider>,
   document.getElementById('root')
 );
 
